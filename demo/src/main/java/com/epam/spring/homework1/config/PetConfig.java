@@ -23,7 +23,6 @@ public class PetConfig {
     }
     
     @Bean
-    @Primary
     @Qualifier("anotherCheetahBean")
     public Cheetah gCheetah2(){
         return new Cheetah();
