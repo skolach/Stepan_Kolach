@@ -13,6 +13,14 @@ public class BeanB {
     @Value("${BeanB.value}")
     private String value;
 
+    public void init(){
+        System.out.println("In Init method of beabB");
+    }
+
+    public void destroy(){
+        System.out.println("In destroy method of beanB");
+    }
+
     public String getName() {
         return name;
     }
