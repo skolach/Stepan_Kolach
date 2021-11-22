@@ -1,9 +1,11 @@
 package com.epam.spring.hw_3.beans;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.DependsOn;
 import org.springframework.stereotype.Component;
 
 @Component
+@DependsOn({"beanB"})
 public class BeanC {
     
     @Value("${BeanC.name}")
