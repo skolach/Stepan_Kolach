@@ -13,6 +13,10 @@ public class BeanB {
     @Value("${BeanB.value}")
     private String value;
 
+    public void newInitMethodForBeanB(){
+        System.out.println("10. In newInitMethodForBeanB() method of beabB");
+    }
+
     public void init(){
         System.out.println("In Init method of beabB");
     }

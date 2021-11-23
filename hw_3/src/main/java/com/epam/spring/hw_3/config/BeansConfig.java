@@ -3,6 +3,7 @@ package com.epam.spring.hw_3.config;
 import com.epam.spring.hw_3.beans.BeanB;
 import com.epam.spring.hw_3.beans.BeanC;
 import com.epam.spring.hw_3.beans.BeanD;
+import com.epam.spring.hw_3.beans.BeanFactoryPostProcessorBean;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -29,5 +30,10 @@ public class BeansConfig {
     @Bean(name = "beanD", initMethod = "init", destroyMethod = "destroy")
     public BeanD getBeanD(){
         return new BeanD();
+    }
+
+    @Bean
+    public BeanFactoryPostProcessorBean getBeanFactoryPostProcessorBean(){
+        return new BeanFactoryPostProcessorBean();
     }
 }
