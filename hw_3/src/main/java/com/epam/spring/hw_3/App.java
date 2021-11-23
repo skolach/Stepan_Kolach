@@ -15,6 +15,12 @@ public class App
 
         System.out.println(context.getBean(BeanB.class).toString());
 
+        for (String s : context.getBeanDefinitionNames()) {
+            
+            System.out.println("--- " + s);
+        }
+        
+
         ((ConfigurableApplicationContext)context).close();
     }
 }
