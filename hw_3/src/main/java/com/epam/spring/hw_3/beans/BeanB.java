@@ -1,17 +1,15 @@
 package com.epam.spring.hw_3.beans;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.stereotype.Component;
 
 @Component
 @DependsOn({"beanD"})
-public class BeanB {
+public class BeanB extends BaseBean{
 
-    @Value("${BeanB.name}")
-    private String name;
-    @Value("${BeanB.value}")
-    private String value;
+    public BeanB(String name, Long value) {
+        super(name, value);
+    }
 
     public void newInitMethodForBeanB(){
         System.out.println("10. In newInitMethodForBeanB() method of beabB");
@@ -24,26 +22,4 @@ public class BeanB {
     public void destroy(){
         System.out.println("In destroy method of beanB");
     }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getValue() {
-        return value;
-    }
-
-    public void setValue(String value) {
-        this.value = value;
-    }
-
-    @Override
-    public String toString() {
-        return "BeanB [name=" + name + ", value=" + value + "]";
-    }
-
 }
