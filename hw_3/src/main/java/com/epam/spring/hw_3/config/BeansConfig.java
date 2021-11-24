@@ -34,7 +34,7 @@ public class BeansConfig {
     }
 
     @Bean
-    public BeanFactoryPostProcessorBean getBeanFactoryPostProcessorBean(){
+    public static BeanFactoryPostProcessorBean getBeanFactoryPostProcessorBean(){
         return new BeanFactoryPostProcessorBean();
     }
 }
